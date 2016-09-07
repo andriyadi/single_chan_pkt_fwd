@@ -20,6 +20,7 @@ then forked by @hallard https://github.com/hallard/single_chan_pkt_fwd
 Added new Features
 ------------------
 
+- Added support for [DycodeX Raspberry Pi LoRa Hat][3]
 - Added support for [Dragino Lora HAT][2] and [LoRasPi][1] (more to come)
 - pin definition are in config file
 - Removed some configuration hard coded in source file and put them into global_conf.json
@@ -59,6 +60,15 @@ root@pi04 # gpio readall
 +-----+-----+---------+----++----+---------+-----+-----+
 | BCM | wPi |   Name  | Physical | Name    | wPi | BCM |
 +-----+-----+---------+--B Plus--+---------+-----+-----+
+```
+
+* For [DycodeX Raspberry Pi LoRa Hat][3]    
+pins configuration in `global_conf.json`
+```
+  "pin_nss": 10,
+  "pin_dio0": 2,
+  "pin_rst": 0,
+  "pin_led1": 29
 ```
 
 * For [Dragino RPI Lora][2] HAT    
@@ -108,7 +118,7 @@ Pictures
 
 running daemon on Raspberry PI with LoRasPI shield    
 
-<img src="https://raw.githubusercontent.com/hallard/LoRasPI/master/images/LoRasPI-on-Pi.jpg" alt="LoRasPI plugged on PI">
+<img src="https://shop.dycodex.com/wp-content/uploads/2016/08/raspi-hat.jpg" alt="DycodeX Raspberry Pi LoRa Hat">
 
 
 
@@ -170,5 +180,5 @@ The source files in this repository are made available under the Eclipse Public 
 
 [1]: https://github.com/hallard/LoRasPI
 [2]: http://wiki.dragino.com/index.php?title=Lora/GPS_HAT
- 
+[3]: https://shop.dycodex.com/en/product/lora-arduino-raspberry-pi-hat/ 
 
